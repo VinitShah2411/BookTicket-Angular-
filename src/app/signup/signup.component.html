@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Online Ticket Booking Website HTML Template</title>
+</head>
+
+<body>
+    <!-- ==========Preloader========== -->
+    <div class="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-icon" >
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- ==========Preloader========== -->
+    
+    <!-- ==========Sign-In-Section========== -->
+    <form [formGroup]="userForm" (ngSubmit)="adduser()">
+    <section class="account-section bg_img" data-background="assets/images/account/account-bg.jpg">
+        <div class="container">
+            <div class="padding-top padding-bottom">
+                <div class="account-area">
+                    <div class="section-header-3">
+                        <span class="cate">welcome</span>
+                        <h2 class="title">to Booking </h2>
+                    </div>
+                    <!-- <form class="account-form"  > -->
+                        <div class="form-group">
+                            <label>FirstName<span>*</span></label>
+                            <input type="text" placeholder="FirstName" formControlName="firstName">
+                            <span class="err"
+                            *ngIf="userForm.get('firstName')?.touched  && userForm.get('firstName')?.hasError('required')">Please
+                            Enter FirstName</span>
+                        <span class="err" *ngIf="userForm.get('firstName')?.touched  && userForm.get('firstName')?.hasError('minlength')">
+                            FirstName Should be in 3 length 
+                        </span> <br>
+                        </div>
+                        <div class="form-group">
+                            <label>LastName<span>*</span></label>
+                            <input type="text" placeholder="LastName" formControlName="lastName" >
+                            <span class="err"
+                            *ngIf="userForm.get('lastName')?.touched  && userForm.get('lastName')?.hasError('required')">
+                            Please Enter LastName</span> <br>
+                        </div>
+                        <div class="form-group">
+                            <label for="email1">Email<span>*</span></label>
+                            <input type="text" placeholder="Enter Your Email" formControlName="email" >
+                            <span class="err" *ngIf="userForm.get('email')?.touched && !userForm.get('email')?.valid">Please Enter
+                                Email</span>
+                            <br>
+                        </div>
+                        <div class="form-group">
+                            <label for="pass2">Password<span>*</span></label>
+                            <input type="password" placeholder="Password" formControlName="password" >
+                            <span class="err"
+                            *ngIf="userForm.get('password')?.touched && userForm.get('password')?.hasError('required')">
+                            Please Enter Password
+                        </span>
+                        <span class="err"
+                            *ngIf="userForm.get('password')?.touched && userForm.get('password')?.hasError('minlength')">
+                            Password Must be in 8 length</span>
+            
+                        <!-- <span class="err"
+                            *ngIf="userForm.get('password')?.touched && userForm.get('password')?.hasError('strongPassword')">
+                            Please Select Strong Password [include <br> 1) [ @ or $ or # ] <br>2) Upper Letter <br>3) Lower Letter ]
+                        </span> -->
+                        <br>
+                        </div>
+                        <!-- <div class="form-group text-center">
+                            <input type="submit">Sign Up</button>
+                        </div> -->
+                        <div class="form-group text-center">
+                        <button class="btn btn-primary" type="submit">Signup</button>
+                        </div>
+                    <!-- </form> -->
+                    <div class="or"><span>Or</span></div>
+                    <div class="option">
+                        Already have an account? <a routerLink="/login">Login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</form>
+   </body>
+</html>
+
+

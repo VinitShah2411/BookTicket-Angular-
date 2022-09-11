@@ -1,0 +1,81 @@
+ <br>
+<h2 align="center" class="upper">Add Movie</h2>
+<div class="form-group">
+<div class="widget-1-body">
+</div>
+</div>
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        
+        
+        <form [formGroup]="adminForm" (ngSubmit)="addmovie()"> 
+            Movie Name: <input type="text" class="form-control" formControlName="movieName"/>
+            <span class="err"
+            *ngIf="adminForm.get('movieName')?.touched  && adminForm.get('movieName')?.hasError('required')">Please
+            Enter Movie Name</span><br>
+            Duration: <input type="text" class="form-control" formControlName="duration" />
+            <span class="err"
+            *ngIf="adminForm.get('duration')?.touched  && adminForm.get('duration')?.hasError('required')">Please
+            Enter Duration</span><br>
+            <!-- <form> -->
+                
+                
+                <!-- <fieldset id="group1">
+                    <input type="radio" value="value1" name="group1" id="same">
+                    <input type="radio" value="value2" name="group2" id="same1">
+                    <input type="radio" value="value3" name="group3"id="same2">
+                </fieldset>
+            </form> -->
+            <!-- <h6 class="subtitle">genre :</h6>
+            <div class="check-area">
+                <input type="checkbox" formControlName="genre" id="thriller" value="thriller">
+                    <label>thriller</label>
+                <input type="checkbox" formControlName="genre"  id="horror" value="horror">
+                    <label>horror</label>
+                <input type="checkbox" formControlName="genre" id="drama" value="drama">
+                    <label for="drama">drama</label><br>
+                <input type="checkbox" name="genre" id="genre5">
+                    <label for="genre5">action</label>
+                <input type="checkbox" name="genre" id="genre6">
+                    <label for="genre6">comedy</label>
+                <input type="checkbox" name="genre" id="genre7">
+                    <label for="genre7">romantic</label><br>
+                <input type="checkbox" name="genre" id="genre8">
+                    <label for="genre8">animation</label>
+                <input type="checkbox" name="genre" id="genre9">
+                    <label for="genre9">sci-fi</label>
+                <input type="checkbox" name="genre" id="genre10">
+                    <label for="genre10">adventure</label>
+            </div> -->
+            Release Date: <input type="date" formControlName="releaseDate" class="form-control" />
+            <br>
+            Rating: <input type="text" formControlName="rating" class="form-control" />
+            <br>
+            Watch Trailer: <input type="text" formControlName="watchTrailer" class="form-control" />
+            <br>
+            Movie Details: <input type="text" formControlName="movieDetails" class="form-control" />
+            <br>
+            <!-- Movie Poster: <input type="file" formControlName="moviePic" /> -->
+            <br><br>
+            <button class="btn btn-primary" type="submit">Add Movie</button>
+        </form>
+    </div>
+</div>
+<br>     
+            
+            
+            
+            
+            
+            
+        
+            
+
+            
+         
+          
+          
+          
+       
+        

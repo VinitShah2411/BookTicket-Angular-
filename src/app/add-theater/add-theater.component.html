@@ -1,0 +1,58 @@
+<p>add-theater works!</p>
+
+<br>
+<h2 align="center" class="upper">Add Theater</h2>
+<div class="form-group">
+<div class="widget-1-body">
+</div>
+</div>
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        
+        
+        <form [formGroup]="theaterForm" (ngSubmit)="addtheater()"> 
+            Theater Name: <input type="text" class="form-control" formControlName="theaterName"/>
+            <!-- <span class="err"
+             *ngIf="adminForm.get('theaterName')?.touched  && adminForm.get('theaterName')?.hasError('required')">Please
+            Enter Movie Name</span><br> -->
+
+            Morning ShowTime: <input type="time" class="form-control" formControlName="morningShowTime" />
+            <!-- <span class="err"
+            *ngIf="adminForm.get('morningShowTime')?.touched  && adminForm.get('morningShowTime')?.hasError('required')">Please
+            Enter Morning ShowTime</span><br> -->
+
+            Noon ShowTime: <input type="time" class="form-control" formControlName="noonShowTime" />
+            <!-- <span class="err"
+            *ngIf="adminForm.get('noonShowTime')?.touched  && adminForm.get('noonShowTime')?.hasError('required')">Please
+            Noon ShowTime</span><br> -->
+
+            Night ShowTime: <input type="time" class="form-control" formControlName="nightShowTime" />
+            <!-- <span class="err"
+            *ngIf="adminForm.get('nightShowTime')?.touched  && adminForm.get('nightShowTime')?.hasError('required')">Please
+            Enter Night ShowTime</span><br> -->
+
+            Address: <input type="text" formControlName="address" class="form-control" />
+            <br>
+            <button class="btn btn-primary" type="submit">Add Theater</button>
+        </form>
+    </div>
+</div>
+<br>     
+            
+            
+            
+            
+            
+            
+        
+            
+
+            
+         
+          
+          
+          
+       
+        
+

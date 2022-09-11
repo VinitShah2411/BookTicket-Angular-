@@ -1,0 +1,33 @@
+<br>
+<div class="row style">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+<table class="table table-bordered">
+    <tr>
+        <td class="clr">MoiveName</td>
+        <td class="clr">Duration</td>
+        <td class="clr">Relese Date</td>
+        <td class="clr">Rating</td>
+        <td class="clr">Watch trailer</td>
+        <td class="clr">Moive Details</td>
+        <td class="clr">Action</td>
+    </tr>
+
+    <tr *ngFor="let m of movies">
+        <td class="clr">{{m.movieName}}</td>
+        <td class="clr">{{m.duration}}</td>
+        <td class="clr">{{m.releaseDate}}</td>
+        <td class="clr">{{m.rating}}</td>
+        <td class="clr">{{m.watchTrailer}}</td>
+        <td class="clr">{{m.movieDetails}}</td>
+        <td class="clr">
+            <a class="fakelink" (click)="deletemovie(m.movieId)">Delete</a>|
+            <a routerLink="/admin/editmovie/{{m.movieId}}">Edit</a> 
+         </td>
+         
+    </tr>
+</table>
+<a class="nav-link" routerLink="/admin/addmovieticket" tabindex="-1">Add Movie</a>
+    </div>
+</div>
+        

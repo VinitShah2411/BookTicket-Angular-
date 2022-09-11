@@ -1,0 +1,32 @@
+<br>
+<div class="row style">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+<table class="table table-bordered">
+    <tr>
+        <td class="clr">Theater Name</td>
+        <td class="clr">Morning Show-Time</td>
+        <td class="clr">Noon Show-Time</td>
+        <td class="clr">Night Show-Time</td>
+        <td class="clr">Address</td>
+        <td class="clr">Action</td>
+    </tr>
+
+    <tr *ngFor="let t of theaters">
+        <td class="clr">{{t.theaterName}}</td>
+        <td class="clr">{{t.morningShowTime}}</td>
+        <td class="clr">{{t.noonShowTime}}</td>
+        <td class="clr">{{t.nightShowTime}}</td>
+        <td class="clr">{{t.address}}</td>
+        <td class="clr">
+            <a class="fakelink" (click)="deletetheater(t.theaterId)">Delete</a>|
+            <a routerLink="/admin/edittheater/{{t.theaterId}}">Edit</a> 
+         </td>
+        </tr>
+    </table>
+         
+<a class="nav-link" routerLink="/admin/addTheater" tabindex="-1">Add Theater</a>
+    </div>
+</div>
+        
+

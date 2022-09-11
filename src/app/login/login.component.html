@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Boleto  - Online Ticket Booking Website HTML Template</title>
+
+
+</head>
+
+<body>
+    <!-- ==========Preloader========== -->
+    <div class="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-icon" >
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- ==========Preloader========== -->
+    
+    <!-- ==========Sign-In-Section========== -->
+    <form [formGroup]="userForm" (ngSubmit)="login()">
+    <section class="account-section bg_img" data-background="assets/images/account/account-bg.jpg">
+        <div class="container">
+            <div class="padding-top padding-bottom">
+                <div class="account-area">
+                    <div class="section-header-3">
+                        <span class="cate">hello</span>
+                        <h2 class="title">welcome back</h2>
+                    </div>
+                    <!-- <form class="account-form"> -->
+                       
+
+                        <div class="form-group">
+                            <label>Email<span>*</span></label>
+                            <input type="text" placeholder="Enter Your Email" formControlName="email">
+                            <br>
+                        </div>
+                        <div class="form-group">
+                            <label>Password<span>*</span></label>
+                            <input type="password" placeholder="Password" formControlName="password">
+                        </div>
+                        <div class="form-group checkgroup">
+                           
+                            <a href="#0" class="forget-pass">Forget Password?</a>
+                        </div>
+                        <div class="form-group text-center">
+                            <!-- <input type="submit" value="log in"> -->
+                            <button class="btn btn-primary" type="submit">Login</button>
+                            <!-- <input type="checkbox" onclick="myFunction()">Show Password -->
+                        </div>
+                    <!-- </form> -->
+                    
+                    <div class="or"><span>Or</span></div>
+                    <div class="option">
+                        Don't have an account? <a routerLink="/signup">sign up now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</form>
+</body>
+
+
+</html>

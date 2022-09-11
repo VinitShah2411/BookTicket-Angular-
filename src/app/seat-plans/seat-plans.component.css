@@ -1,0 +1,36 @@
+.fakelink{
+    text-decoration: underline;
+    color: white;
+}
+
+.fakelink:hover{
+    cursor: pointer;
+}
+
+.green {
+    background-color: red;
+  }
+
+  /* .red {
+    background-color: red;
+  } */
+
+  .featuredBtn.active {
+    background-color: green;
+    color: green;
+  }
+
+  .featuredBtn {
+    width: 50px;
+    height: 50px;
+    color: green;
+    font-weight: 700;
+    background-color: blue;
+    border: none;
+    letter-spacing: 2px;
+    outline: green;
+  }
+
+  .bg{
+    background-color: blue;
+  }
